@@ -58,13 +58,5 @@ python evaluate.py --network <path_to_pretrained_network> --dataset <dataset> --
 Important note: `<path_to_pretrained_network>` is the path to the pretrained model obtained by training procedure. Usually, the pretrained models obtained by training are stored at `logs/<timstamp>_<training_description>`. You can select the desired pretrained model to evaluate. We do not have to specify neural architecture as the codebase will automatically detect the neural architecture.
 
 
-## Acknowledgement and Citation
-Our codebase is developed based on [Kumra et al.](https://github.com/skumra/robotic-grasping) If you find this work helpful, please consider citing:
-```
-@article{vuong2023grasp,
-  title={Grasp-Anything: Large-scale Grasp Dataset from Foundation Models},
-  author={Vuong, An Dinh and Vu, Minh Nhat and Le, Hieu and Huang, Baoru and Huynh, Binh and Vo, Thieu and Kugi, Andreas and Nguyen, Anh},
-  journal={arXiv preprint arXiv:2309.09818},
-  year={2023}
-}
-```
+## Acknowledgement
+Our codebase is developed based on [Kumra et al.](https://github.com/skumra/robotic-grasping).

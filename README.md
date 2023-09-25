@@ -2,7 +2,7 @@
 This is the repository of the paper "Grasp-Anything: Large-scale Grasp Dataset from Foundation Models"
 ## Table of contents
    1. [Installation](#installation)
-   1. [Datasets](#objectnav)
+   1. [Datasets](#datasets)
    1. [Training](#training)
    1. [Testing](#testing)
 

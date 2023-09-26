@@ -33,7 +33,7 @@ $ pip install -r requirements.txt
 ```
 
 ## Training
-We use GR-ConvNet as our defaul deep network. To train GR-ConvNet on different datasets, you can use the following command:
+We use GR-ConvNet as our default deep network. To train GR-ConvNet on different datasets, you can use the following command:
 ```bash
 $ python train_network.py --dataset <dataset> --dataset-path <dataset> --description <your_description> --use-depth 0
 ```

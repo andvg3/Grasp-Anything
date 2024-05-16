@@ -22,10 +22,10 @@ class GraspAnythingDataset(GraspDatasetBase):
         """
         super(GraspAnythingDataset, self).__init__(**kwargs)
 
-        self.grasp_files = glob.glob(os.path.join(file_path, 'positive_grasp', '*.pt'))
+        self.grasp_files = glob.glob(os.path.join(file_path, 'grasp_label_positive', '*.pt'))
         self.prompt_files = glob.glob(os.path.join(file_path, 'prompt', '*.pkl'))
         self.rgb_files = glob.glob(os.path.join(file_path, 'image', '*.jpg'))
-        self.mask_files = glob.glob(os.path.join(file_path, 'mask', '*.npy'))
+        # self.mask_files = glob.glob(os.path.join(file_path, 'mask', '*.npy'))
 
         if kwargs["seen"]:
             with open(os.path.join('split/grasp-anything/seen.obj'), 'rb') as f:
@@ -41,7 +41,7 @@ class GraspAnythingDataset(GraspDatasetBase):
         self.grasp_files.sort()
         self.prompt_files.sort()
         self.rgb_files.sort()
-        self.mask_files.sort()
+        # self.mask_files.sort()
 
         self.length = len(self.grasp_files)
 
@@ -87,12 +87,12 @@ class GraspAnythingDataset(GraspDatasetBase):
         return depth_img.img
 
     def get_rgb(self, idx, rot=0, zoom=1.0, normalise=True):
-        mask_file = self.grasp_files[idx].replace("positive_grasp", "mask").replace(".pt", ".npy")
-        mask_img = mask.Mask.from_file(mask_file)
+        # mask_file = self.grasp_files[idx].replace("positive_grasp", "mask").replace(".pt", ".npy")
+        # mask_img = mask.Mask.from_file(mask_file)
         rgb_file = re.sub(r"_\d{1}\.pt", ".jpg", self.grasp_files[idx])
-        rgb_file = rgb_file.replace("positive_grasp", "image")
+        rgb_file = rgb_file.replace("grasp_label_positive", "image")
         rgb_img = image.Image.from_file(rgb_file)
-        rgb_img = image.Image.mask_out_image(rgb_img, mask_img)
+        # rgb_img = image.Image.mask_out_image(rgb_img, mask_img)
 
         # Jacquard try
         rgb_img.rotate(rot)

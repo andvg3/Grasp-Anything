@@ -23,7 +23,7 @@ class GraspAnythingDataset(GraspDatasetBase):
         super(GraspAnythingDataset, self).__init__(**kwargs)
 
         self.grasp_files = glob.glob(os.path.join(file_path, 'grasp_label_positive', '*.pt'))
-        self.prompt_files = glob.glob(os.path.join(file_path, 'prompt', '*.pkl'))
+        self.prompt_files = glob.glob(os.path.join(file_path, 'scene_description', '*.pkl'))
         self.rgb_files = glob.glob(os.path.join(file_path, 'image', '*.jpg'))
         # self.mask_files = glob.glob(os.path.join(file_path, 'mask', '*.npy'))
 

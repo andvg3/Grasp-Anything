@@ -20,7 +20,6 @@ $ pip install -r requirements.txt
 ```
 
 ## Datasets
-- Grasp-Anything will be made publicly available soon. LVIS splits of all datasets will also be included along with the release of Grasp-Anything.
 - For other datasets, please obtain following their instructions: [Cornell](https://www.kaggle.com/datasets/oneoneliu/cornell-grasp), [Jacquard](https://jacquard.liris.cnrs.fr/), [OCID-grasp](https://github.com/stefan-ainetter/grasp_det_seg_cnn), and [VMRD](https://gr.xjtu.edu.cn/zh/web/zeuslan/dataset).
 - All datasets should be include in the following hierarchy:
 ```
@@ -55,7 +54,7 @@ For testing procedure, we can apply the similar commands to test different basel
 ```bash
 python evaluate.py --network <path_to_pretrained_network> --dataset <dataset> --dataset-path data/<dataset> --iou-eval
 ```
-Important note: `<path_to_pretrained_network>` is the path to the pretrained model obtained by training procedure. Usually, the pretrained models obtained by training are stored at `logs/<timstamp>_<training_description>`. You can select the desired pretrained model to evaluate. We do not have to specify neural architecture as the codebase will automatically detect the neural architecture.
+Important note: `<path_to_pretrained_network>` is the path to the pretrained model obtained by training procedure. Usually, the pretrained models obtained by training are stored at `logs/<timstamp>_<training_description>`. You can select the desired pretrained model to evaluate. We do not have to specify neural architecture as the codebase will automatically detect the neural architecture. Pretrained weights are available at [this link](https://drive.google.com/file/d/1OXVFXqv0rgxiVLz89tnSj0Xb-20ZJ4fH/view?usp=sharing).
 
 
 ## Acknowledgement

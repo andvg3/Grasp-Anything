@@ -20,6 +20,7 @@ $ pip install -r requirements.txt
 ```
 
 ## Datasets
+- Please obtain Grasp-Anything via [this website](https://airvlab.github.io/grasp-anything/).
 - For other datasets, please obtain following their instructions: [Cornell](https://www.kaggle.com/datasets/oneoneliu/cornell-grasp), [Jacquard](https://jacquard.liris.cnrs.fr/), [OCID-grasp](https://github.com/stefan-ainetter/grasp_det_seg_cnn), and [VMRD](https://gr.xjtu.edu.cn/zh/web/zeuslan/dataset).
 - All datasets should be include in the following hierarchy:
 ```
